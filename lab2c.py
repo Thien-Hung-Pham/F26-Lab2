@@ -18,9 +18,11 @@
 # ---- and ---- are equal.
 # Get input from the user
 
+# Get input from the user
 str1 = input("Enter a sentence: ")
 str2 = input("Enter another sentence: ")
 
+# Use if, elif, and else statments with the len() function to check which of the 2 is longer.
 if len(str1) > len(str2):
 	print(f"{str1} is longer then {str2}!")
 elif len(str2) > len(str1):

@@ -9,6 +9,8 @@
 # Ask the user to enter a four-digit integer.
 num = int(input("Enter a 4 digit integer: "))
 
+# Check if num is equal to 1984. If it is, print "George Orwell". Otherwise, print "Not quite right!".
+
 if num == 1984:
 	print("George Orwell")
 else:
