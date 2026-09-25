@@ -2,18 +2,22 @@
 
 #!/usr/bin/env python3
 # Author: Thien Hung Pham
-# Date: 21/09/2026
+# Date: 25/09/2026
 # Purpose: Check the number of command line arguments.
 # Usage: ./lab2e.py <argument1> <argument2>
 
 # Import the sys module to access command line arguments.
 import sys
 
+nums_args = len(sys.argv) - 1  # Subtract 1 to exclude the script name from the count.
 
 # Check the number of command line arguments provided by the user.
-if len(sys.argv) == 1: # 1 means the script name is included in the count, so if len(sys.argv) is 1, it means no additional arguments were provided.
+if nums_args == 1:  
 	print("This script requires exactly two arguments. No arguments were provided!")
-elif len(sys.argv) != 3: # 3 means the script name and two additional arguments are included in the count, so if len(sys.argv) is not 3, it means the user did not provide exactly two arguments.
-	print("This script requires exactly two arguments. You provided " + str(len(sys.argv) - 1) + " arguments.") # str(len(sys.argv) - 1) is used to get the number of arguments provided by the user, excluding the script name.
+
+elif nums_args != 2:
+	# str(nums_args) is used to convert the number of arguments provided by the user to string.
+	print("This script requires exactly two arguments. You provided " + str(nums_args) + " arguments.") 
+	
 else:
     print("Hello user, good job, your provided two arguments!")

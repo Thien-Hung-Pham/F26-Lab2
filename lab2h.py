@@ -2,7 +2,7 @@
 
 #!/usr/bin/env python3
 # Author: Thien Hung Pham
-# Date: 21/09/2026
+# Date: 25/09/2026
 # Purpose: Learn how to use while loops.
 # Usage: ./lab2h.py
 

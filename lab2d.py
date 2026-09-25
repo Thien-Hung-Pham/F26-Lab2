@@ -2,7 +2,7 @@
 
 #!/usr/bin/env python3
 # Author: Thien Hung Pham
-# Date: 21/09/2026
+# Date: 25/09/2026
 # Purpose: Learn how to use command line arguments.
 # Usage: ./lab2d.py
 
@@ -28,5 +28,3 @@ print(sys.argv[1]) # prints the second argument .
 print(sys.argv[2]) # prints the third argument.
 print(len(sys.argv)) # tells us the number of command line arguments the user provides from terminal.
 
-
-# TO DO IN SCREENSHOT SHOWS THE OUTPUT AND ANSWER WHAT THE PROFESSOR ASKED

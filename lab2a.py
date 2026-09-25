@@ -2,8 +2,9 @@
 
 #!/usr/bin/env python3
 # Author: Thien Hung Pham
-# Date: 21/09/2026
+# Date: 25/09/2026
 # Purpose: Create a variable, check its type and print the variable.
+
 # Usage: ./lab2a.py
 
 # TO DO 1: Follow the instructions given in README.md file
@@ -12,6 +13,8 @@ print(f"Type of x: {type(x)}")
 
 # Convert the input string to an integer.
 x = int(x)
+print(f"Type of x after conversion: {type(x)}")
+
 
 # Check whether x is greater than or equal to 6.
 if x >= 6:

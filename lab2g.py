@@ -1,8 +1,8 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Thien Hung Pham
+# Date: 25/09/2026
 # Purpose: Learn how and practice using nested if, elif, and else statments..
 # Usage: ./lab2g.py
 

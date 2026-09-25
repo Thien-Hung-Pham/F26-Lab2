@@ -3,7 +3,7 @@
 
 #!/usr/bin/env python3
 # Author: Thien Hung Pham
-# Date: 21/09/2026
+# Date: 25/09/2026
 # Purpose: Practice using if, elif, and else statments.
 # Usage: ./lab2c.py
 
