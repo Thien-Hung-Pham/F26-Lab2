@@ -17,24 +17,39 @@ status = input("Enter your marriage status (s/m): ").lower()
 tax1 = 0
 tax2 = 0
 
-# Constant variables for tax brackets based on marriage status.
-SINGLE_BRACKET = 32000
-MARRIED_BRACKET = 64000
-SINGLE_RATE = 0.10
-MARRIED_RATE = 0.25
+SINGLE_THRESHOLD_1 = 8000
+SINGLE_THRESHOLD_2 = 32000
 
-if status == "s":
-    if income <= SINGLE_BRACKET:
-        tax1 = income * SINGLE_RATE
+MARRIED_THRESHOLD_1 = 16000
+MARRIED_THRESHOLD_2 = 64000
+
+if income < 0:
+    print("Income cannot be negative. Please enter a valid income.")
+    exit()
+
+if status == 's':
+    if income <= SINGLE_THRESHOLD_1:
+        tax1 = 0.1 * income
+    elif income <= SINGLE_THRESHOLD_2:
+        tax1 = 0.15 * (income - SINGLE_THRESHOLD_1)
+        tax2 = 800
     else:
-        tax1 = (income - SINGLE_BRACKET) * MARRIED_RATE
-        tax2 = SINGLE_BRACKET * SINGLE_RATE
+        tax1 = 0.25 * (income - SINGLE_THRESHOLD_2)
+        tax2 = 4400
+
+elif status == 'm':
+    if income <= MARRIED_THRESHOLD_1:
+        tax1 = 0.1 * income
+    elif income <= MARRIED_THRESHOLD_2:
+        tax1 = 0.15 * (income - MARRIED_THRESHOLD_1)
+        tax2 = 1600
+    else:
+        tax1 = 0.25 * (income - MARRIED_THRESHOLD_2)
+        tax2 = 8800
+
 else:
-    if income <= MARRIED_BRACKET:
-        tax1 = income * MARRIED_RATE
-    else:
-        tax1 = (income - MARRIED_BRACKET) * MARRIED_RATE
-        tax2 = MARRIED_BRACKET * MARRIED_RATE
+    print("Invalid marriage status. Please enter 's' for single or 'm' for married.")
+    exit()
 
 total_tax = tax1 + tax2
 income_after_tax = income - total_tax
