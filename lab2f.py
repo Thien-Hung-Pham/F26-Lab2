@@ -14,7 +14,7 @@ num_args = len(sys.argv) - 1
 # Check the number of command line arguments provided by the user.
 if num_args < 2:
 	print("The script requires at least 2 arguments.")
-elif num_args >= 2:
+else:
 	name = sys.argv[1]
 	age = sys.argv[2]
 	 
